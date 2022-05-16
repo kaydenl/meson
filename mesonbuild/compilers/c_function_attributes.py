@@ -89,6 +89,8 @@ C_FUNC_ATTRIBUTES = {
     'retain': '__attribute__((retain)) int x;',
     'returns_nonnull':
         'int *foo(void) __attribute__((returns_nonnull));',
+    'target_clones':
+        '__attribute__((target_clones("default"))) int foo(void);',
     'unused':
         'int foo(void) __attribute__((unused));',
     'used':
