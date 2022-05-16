@@ -86,6 +86,7 @@ C_FUNC_ATTRIBUTES = {
         'struct __attribute__((packed)) foo { int bar; };',
     'pure':
         'int foo(void) __attribute__((pure));',
+    'retain': '__attribute__((retain)) int x;',
     'returns_nonnull':
         'int *foo(void) __attribute__((returns_nonnull));',
     'unused':
@@ -113,7 +114,6 @@ C_FUNC_ATTRIBUTES = {
     'weakref': '''
         static int foo(void) { return 0; }
         static int var(void) __attribute__((weakref("foo")));''',
-    'retain': '__attribute__((retain)) int x;',
 }
 
 CXX_FUNC_ATTRIBUTES = {
